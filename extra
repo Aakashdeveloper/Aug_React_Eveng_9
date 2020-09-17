@@ -1,0 +1,328 @@
+https://code.visualstudio.com/
+https://github.com/
+https://nodejs.org/en/
+https://www.youtube.com/c/DeveloperFunnel/videos
+https://git-scm.com/downloads
+
+NPM                             
+React = 3
+React_hooks -1
+React-Redux =2
+React-JWT(Login Logout)-1
+Mock API
+json-server
+Github
+-> MERN
+React-GarphQL 1
+Depolyment
+-> Docker
+-> Nginx
+-> Heroku
+React-Saga -1
+Basic React Native=1
+Testing
+
+--------NOT--------------
+API
+GarphQL
+Login/Logout
+
+/////////////////////////////////
+SPA
+Single Page Application
+
+React is a javascript framework that help 
+to build single page Application using
+component based structre
+Open Source
+
+--------------------------------------
+Node Package Manager
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<
+JSON
+>javascript object notation
+Way to respresnt the data
+
+key:value
+[
+    {
+        rollno:1
+        name:"john",
+        class:"ui"
+    },
+    {
+        rollno:2
+        name:"Alvin",
+        class:"React",
+        city:"Newyork"
+    }
+]
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<
+Package.json
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<
+> Starting point to Application
+> help to manage Package
+> meta data
+> script 
+
+>>>>>>>>>>>>>>>>>
+Step to create package.json
+<<<<<<<<<<<<<<<<<
+**NodeJs must be installed in system
+> navigate to the folder using cmd
+> npm init
+> Answer all questions
+> type yes
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Packages
+Depedency
+node_modules
+
+>>>>>Local package
+>>>>>Global package
+
+>>>>>>>>>>>>>>>>>
+Step to install packages
+<<<<<<<<<<<<<<<<<
+**NodejS must be installed in system
+> navigate to folder
+> npm i packagename/npm install packagename/ npm i packagename --save
+
+
+>>>>>>
+LocalDependency
+>>Local to the folder
+>>Max package will be installed as LocalDependency
+
+<<<<<<<<<<<<<<<<<<
+GlobalDependency
+>>local to the system
+>>Need admin access to install GlobalDependency
+>>very few package will be installed Globally
+>>package that need to generate Application will be installed Globally
+
+>>>>Step to install global Depedency<<<<<
+#window
+> open your cmd as admin
+> npm i -g packagename
+
+#Mac/linux
+> open terminal
+> sudo npm i -g packagename
+
+>>>>Step to generate react app<<<<<
+#window
+{One Time}
+> open your cmd as admin
+> npm i -g create-react-app
+
+{Next All Time}
+>open cmd
+>navigate to folder where you want app
+>create-react-app myapp
+
+#Mac
+{One Time}
+> open terminal
+> sudo npm i -g create-react-app
+
+{Next All Time}
+>open terminal
+>navigate to folder where you want app
+>create-react-app myapp
+
+
+>>>>>>>>>>>>>>>>>>>><<<<<
+Step to start app
+<<<<<<<<<<<<<<
+>navigate to  app
+>npm start
+>localhost:3000
+
+
+>>>>>.
+basic javascript
+component
+firstcomponent
+event
+
+////////////////////////////////
+component
+////////////////////////Hooks component
+
+Functional                  ClassComponent
+dumb component              Logical component
+display view                logics/api call/lifecycle
+light in weight             Heavy 
+
+
+class                       Functional
+callApi    >>>>>Data>>>>>>  display data
+
+State & Props
+state act like a local variable
+Props help to transfer the data
+
+Component A   ============================ Component B
+State                   Props              State
+
+
+parent==>> child
+child ==>> parent
+
+Map in javascript
+Filter in javascript
+
+map help to iterate over the data
+filter help to filter out the value and only return those for which output is true
+
+
+var a = [23,43,35,36,12,38]
+a.filter((data) => { return data>34})
+[43, 35, 36, 38]
+
+var a = [23,43,35,36,12,38]
+undefined
+a.indexOf(36)
+3
+a.indexOf(34)
+-1
+a.indexOf(43)
+1
+a.indexOf(38)
+5
+
+parent to child => use props 
+child to parent => use props with function
+
+/////
+Routing
+///////
+npm i react-router-dom
+
+primary> blue
+success> green
+danger> Red
+warning> orange
+info> skyblue
+
+
+//////////
+Dummy API
+
+install global Package
+npm i -g json-server
+json-server --watch db.json --port 8900
+
+
+{
+    "test":[
+        {},
+        {}
+    ]
+}
+
+https://developerfunnel.herokuapp.com/hotels
+
+
+var a = 10
+var b = 
+"my age is "+a 
+`my age is ${a}`
+
+
+function add(){
+    return "hiii"
+}
+
+
+
+////////////mounting/Rendering///////////////
+constructore
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+////////////Update///////////////
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapShotBeforeUpdate()
+ComponentDidUpdate
+
+////////////Unmounting///////////////
+componentWillUnmount()
+
+////
+
+View (display part)
+    ||
+    \/
+Action(Api calls)
+    ||
+    \/
+Reducer(pass state from action and manage state)
+    ||
+    \/
+Store(save the new state for view)
+    ||
+    \/
+View(display on the screen)
+
+
+manage state
+big Application
+pass data from one component to another
+    which is not nested
+To avoid multiple time render
+
+npm i redux react-redux
+
+
+npm i prop-types redux react-redux react-router-dom  react-slick redux-logger redux-promise react-test-renderer react-addons-test-utils enzyme-adapter-react-16
+
+
+/******GetAllUser*****/
+(GET)> http://localhost:5000/api/auth/users
+
+/******Register*****/
+(POST)> http://localhost:5000/api/auth/register
+(body) => {"name":"Aakash", "email":"aa@gmail.com","password":"12345678","role":"user?"}
+
+
+/******Login*****/
+(POST) => http://localhost:5000/api/auth/login
+(body)  => {"email":"aa@gmail.com","password":"12345678"}
+(response)=> {auth:true,token:'dgsdg'}
+
+/******UserInfo*****/
+(GET) => http://localhost:5000/api/auth/userinfo
+(Header) => {'x-access-token':'token value from login'}
+(response) => {userinfo}
+
+docker build . -t augeveng
+docker run -p 8086:3000 augeveng
+
+docker image ls 
+
+ginx.conf
+server {
+        cert_key:
+        cert_pem:
+        listen       8081;
+        server_name  abc.com;
+        location / {
+	    root   /var/www/react-app;
+        index  index.html index.htm;
+        }
+    }
+
+
+
+/////////Create React Native App //////
+npm i -g create-react-native-app
+create-react-native-app mymobi

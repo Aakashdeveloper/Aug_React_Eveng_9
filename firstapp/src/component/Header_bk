@@ -1,0 +1,52 @@
+import React,{Component} from 'react';
+
+class Header extends Component{
+    constructor(){
+        super()
+
+        this.state={
+            title:'Developer Funnel',
+            keyword:'User Text Here'
+        }
+    }
+    render(){
+
+        const mystyles = {
+            header:{
+                backgroundColor:'teal'
+            },
+            logo:{
+                fontSize:'30px',
+                color:'#fff',
+                textAlign:'center'
+            }
+        }
+        return(
+            <header style={mystyles.header}>
+                <div style={mystyles.logo}>{this.state.title}</div>
+                <center>
+                    <input/>
+                    <p>{this.state.keyword}</p>
+                </center>
+                <hr/>
+            </header>
+        )
+    }
+}
+
+
+export default Header;
+
+
+/*
+const Header = () => {
+    return(
+        <React.Fragment>
+            <center>
+                <h2>NareshIT</h2>
+            </center>
+            <hr/>
+        </React.Fragment>
+    )
+}
+*/
